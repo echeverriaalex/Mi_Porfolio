@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    
+    height: 100%;
+    position: fixed;
+    /*z-index: 1;*/
+    background: rgb(83, 204, 252);
+}
+
+.img-container{
+    background: rgb(83, 204, 252);
+    padding: 20px 20px;
+    /*height: 50%;*/
+    border-radius: 20px;
+    /* width: 90%; margin: 10px 0;*/
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    width: 100%;
+    /*background: red;*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu{
+    height: 100%;
+    /*background: red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+
+    text-align: center;
+    list-style: none;
+}
+
+.menu a{
+    font-family: monospace;
+    color: rgb(255, 249, 247);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+main{
+    float: right;
+    width: 60%;
+    background: rgb(208, 217, 224);
+}
+
+.section{    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.redes{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    height: 50px;
+}
+
+.social-red{
+    /*background: rgb(134, 127, 127);
+    
+    border-radius: 50%;*/
+}
+
+.social-red a{
+    width: 100%;
+}
+
+.social-red img{
+    /*border-radius: 50%;*/
+    height: 100%;
+}
+
+.description{
+    margin: 20px;
+}
+
+.title{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+.img-container, .info-container{
+    width: 80%;
+}
+
+
+
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section-skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: flex-start;
+
+}
+
+.skill{
+    margin: 30px 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background: red;*/
+    
+}
+
+.img-skill{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.skill image{
+    width: 90%;
+    height: 90%;
+
+}
+
+.skill p{
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+footer{
+    float: right;
+    width: 60%;
+    height: 10vh;
+    background: rgba(24, 182, 245, 0.973);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer p{
+    background: red;
+    font-size: 1.5rem;
+    text-align: center;
+}
