@@ -4,7 +4,8 @@
 }
 
 header{
-    width: 40%;
+    width: 20%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +63,7 @@ nav{
 
 main{
     float: right;
-    width: 60%;
+    width: 80%;
     background: rgb(208, 217, 224);
 }
 
@@ -141,7 +142,6 @@ img{
     flex-wrap: wrap;
     justify-content: center;
     justify-items: flex-start;
-
 }
 
 .skill{
@@ -192,4 +192,46 @@ footer p{
     background: red;
     font-size: 1.5rem;
     text-align: center;
+}
+
+@media(max-width: 560px){
+    header{
+        width: 30vw;
+    }
+
+
+
+    .menu a{
+        font-family: monospace;
+        color: rgb(255, 249, 247);
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+
+    main{
+        float: right;
+        width: 70vw;
+        background: rgb(208, 217, 224);
+    }
+
+
+    .section{    
+        min-height: 100vh;
+        padding: 1rem;
+    }
+
+
+    .skill{
+        margin: 20px 10px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*background: red;*/
+        
+    }
+    
 }
