@@ -272,7 +272,7 @@ footer p{
     }
     
     footer p{
-        background: red;
+        /*background: red;*/
         font-size: 1rem;
         text-align: center;
     }
