@@ -139,13 +139,15 @@ li{
     /*font-family: monospace;*/
     font-family: "Michroma", sans-serif;
     font-style: normal;
+    margin: 5px 0px;
 }
 
 .menu a:hover{
     width: 100%;
     transition: all 0.3s;
     font-size: 1.6rem;
-    /*scale: 1.2;*/
+    text-decoration: underline;
+    text-transform: capitalize;
 }
 
 .menu a:active{
@@ -331,8 +333,11 @@ main{
 }
 
 .skill:hover{
-    transition: all 1s;
-    /*rotate: 360deg;*/
+    transition: all 1.2s;
+    cursor: pointer;
+    rotate: 360deg;
+    
+    background: linear-gradient( black 20%,  gray 60%,  rgba(88, 231, 95, 0.507) 80%);
 }
 
 .skill-image-container{
@@ -346,12 +351,22 @@ main{
     max-height: 100%;
 }
 
-.skill p{
-    height: 20%;
+.name-skill-container{
+    height: 15%;
     width: 90%;
+}
+
+.container-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-label{
+    font-size: 1.3rem;
+    font-weight: bolder;
     text-align: center;
-    font-size: 1rem;
-    /* background: gray; */
+    color: white;
 }
 
 
