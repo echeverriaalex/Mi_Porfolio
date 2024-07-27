@@ -1,12 +1,16 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root{
-    --header-width: 25%;
+    --header-width: 20%;
+    --min-header-width: 30%;
     --header-height: 99%;
-    --main-width: 75%;
+    
+    --main-width: 80%;
+    --max-main-width: 70%;
     
     /* color original del menu
     rgb(83, 204, 252);
@@ -18,25 +22,54 @@
     --menu-text-color: rgb(88, 231, 95);
     --my-name-color: rgb(7, 7, 7);
     --main-text-color: white;
+
+    --white-text: white;
+    --green-text: rgb(88, 231, 95);
 }
 
 body{
-    background: var(--body-color);
+    background: rgb(209, 209, 207);
+    width: 80%;
+    margin: 0 auto;
+
+    /*
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    */
+    
 }
 
 header{
-    width: var(--header-width);
+    background: var(--header-color);
+    max-width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    float: left;
+    align-items: center;
+}
+
+
+.container-header{
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*
+    max-width: 250px;
+    
     height: var(--header-height);
     position: fixed;
-    background: var(--header-color);
     border: 2px solid rgb(88, 231, 95);
     box-shadow: 5px rgb(88, 231, 95);
     border-radius: 20px;
+    */
 }
+
 
 .img-container, .menu-container{
     max-height: 45%;
@@ -122,16 +155,24 @@ li{
 
 main{
     float: right;
-    width: var(--main-width);
+    /*width: var(--main-width);*/
+    max-width: calc(100% - 250px);
     background: var(--main-color);
     display: flex;
-    flex-direction: column;
-    
-    align-items: center;
+    justify-content: flex-start;
     color: var(--main-text-color);
     
-    background: var(--main-color);
+    background: rgb(37, 37, 37);
 }
+
+/*
+.container-sections{
+    background: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*/
 
 .section{    
     width: 100%;
@@ -150,18 +191,11 @@ main{
     width: 90%;
 }
 
-.section-skills{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .my-name{
-    color: var(--my-name-color);
+    color: black;
     width: 100%;
-    font-size: 3rem;
+    max-height: 20vh;
+    font-size: 2.5rem;
     font-family: "Carter One", system-ui;
     /* 
     no me gusta queda may grande y exagerado
@@ -175,22 +209,11 @@ main{
 }
 
 .description-job{
-    width: 100%;
-    font-size: 2rem;
-    font-family: "Amatic SC", sans-serif;
-    /*font-weight: 700;*/
-    font-style: normal;
-    text-align: center;
-}
-
-.description-job{
-    /*font-family: monospace;*/
-
     font-family: "Michroma", sans-serif;
     font-weight: 400;
     font-style: normal;
-
-
+    width: 100%;
+    text-align: center;
     color: var(--menu-text-color);
     /*text-shadow: 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24);*/
     font-size: 1.5rem;
@@ -199,19 +222,14 @@ main{
 
 .welcome-message{
     width: 100%;
-    margin: 20px;
-    font-size: 2rem;
+    margin: 20px 0px;
+    font-size: 1.5rem;
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
-    /* font-weight: <weight>; */
     font-style: normal;
-
     text-align: center;
-
-    color: black;
-
-
-    /* text-shadow: 20px 20px 20px white, 20px 20px 20px white, 20px 20px 20px white; */
+    color: var(--green-text);
+    /*text-shadow: 0px 0px 20px white, 0px 0px 20px white, 0px 0px 20px white;*/
 }
 
 .title-section{
@@ -224,7 +242,7 @@ main{
 
 .redes{
     margin-top: 40px;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -242,12 +260,8 @@ main{
 }
 
 .container-button{
-    /*background: red;*/
-    
     width: 100%;
-    margin: 20px;
     height: 100px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,32 +284,50 @@ main{
     min-height: 100vh;
 }
 
-.section-skills, .section-porfolio{
+.section-skills{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 20px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    /* background: red; */
 }
 
 .section-skills{
-    /* justify-content: center;*/
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    
+
+    /*
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    */
 }
 
 .skill{
     /* margin: 15px 15px; */
-    width: 10vw;
-    height: 15vw;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     /*background: red;*/
-    gap: 5px;
     border: 2px solid rgb(43, 255, 24);
     border-radius: 20px;    
+}
+
+.margin-5{
+    margin: 5px 5px;
+}
+
+
+.margin-title{
+    margin: 10px 0px;
+}
+
+.margin-text{
+    margin: 30px 0px;
 }
 
 .skill:hover{
@@ -314,14 +346,22 @@ main{
     max-height: 100%;
 }
 
-
 .skill p{
     height: 20%;
     width: 90%;
     text-align: center;
+    font-size: 1rem;
     /* background: gray; */
 }
 
+
+.section-porfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* background: red; */
+}
 
 article{
     width: 20%;
@@ -351,135 +391,93 @@ footer p{
 
 
 
-@media(max-width: 600px ) and (min-width: 400px ){
+@media(max-width: 600px){
 
     *{
         padding: 0;
         margin: 0;
     }
 
+
+
     :root{
-        --mobile-header-width: 35%;
-        --mobile-main-width: 65%;
+        --mobile-header-width: 40%;
+        --mobile-main-width: 60%;
     }
 
     body{
-        background: var(--body-color);
-
-
-
-    }
-
-    header{
-        width: var(--mobile-header-width);
-        height: 100vh;
+        width: 100%;
         margin: 0px 0px;
-        padding: 0px 0px;
-        
     }
 
-
-
-    header{    
-        width: var(--mobile-header-width);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 99vh;
-        /*
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        */
-        vertical-align: middle;
-        position: fixed;
-        background: var(--header-color);
     
+    header{    
+        width: 170px;
+        height: 100%;
         border: 2px solid rgb(88, 231, 95);
         border-color: linear-gradient(rgb(88, 231, 95), rgb(58, 255, 68));
         box-shadow: 5px rgb(88, 231, 95);
         border-radius: 20px;
-    }
-
-
-
-
-
-    nav{
-        padding: unset;
-        margin: unset;
-    }
-
-    .menu{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .menu li{
-        display: block;
-        width: 100%;
-        height: 50px;
-        /* background: blue; */
-    }
-
-    .menu a{
-        font-family: monospace;
-        color: white;
-        font-size: 1rem;
-        text-decoration: none;
+        position: fixed;
     }
     
-    li{
-        display: block;
-        width: 90%;
+
+    .menu a{
+        font-size: 0.9rem;
+        text-decoration: none;
+        height: 40px;
     }
 
     .menu li:hover{
         cursor: pointer;
-        width: 100%;
+        max-width: 100%;
         transition: all 0.3s;
-        font-size: 1.6rem;
-        /*scale: 1.2;*/
+        scale: 1;
     }
-
-    /*
-    main{
-        
-        float: right;
-        width: var(--mobile-main-width);
-        background: var(--main-color);
-        padding: 0px 10px;
-        background: red;
-        width: 60%;
-    }
-    */
 
     main{
-        float: right;
-        width: var(--mobile-main-width);
-        background: var(--main-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: var(--main-text-color);
+        width: calc(100% - 170px)
+    }
+    
+    .my-name{
+        color: black;
+        width: 100%;
+        max-height: 20vh;
+        font-size: 2rem;
+        font-family: "Carter One", system-ui;
+        /* 
+        no me gusta queda may grande y exagerado
+        font-family: "Ga Maamli", sans-serif;
+        */
+
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        text-shadow: 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24);
     }
 
-    .section{    
-        width: 90%;
-        height: 100vh;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+    .description-job{
+        font-family: "Michroma", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        width: 100%;
+        text-align: center;
+        color: var(--menu-text-color);
+        /*text-shadow: 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24);*/
+        font-size: 1rem;
+        text-decoration: none;
+    }
 
-
+    .welcome-message{
+        width: 100%;
+        margin: 20px;
+        font-size: 1rem;
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: center;
+        color: var(--green-text);
+        /*text-shadow: 0px 0px 20px white, 0px 0px 20px white, 0px 0px 20px white;*/
     }
 
     .title-section{
@@ -492,27 +490,13 @@ footer p{
         width: 100%;
     }
 
-    .section-skills{
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-    }
+
+    
+
 
     .skill{
-        margin: 15px 5px;
-        width: 35%;
+        width: 80px;
         height: 18%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .skill p{
-        width: 90%;
-        text-align: center;
     }
 
     footer{
