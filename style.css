@@ -16,9 +16,9 @@
     rgb(83, 204, 252);
     */
     --header-color: rgb(0, 0, 0); /*rgb(34, 82, 114);*/
-    --main-color: rgba(0, 0, 0, 0.9);
+    --main-background-color: rgba(51, 51, 51, 0.918);
     --body-color-black:  rgb(0, 0, 0);
-    --body-color-gray: rgb(37, 37, 37);
+    --body-color-gray: rgb(104, 104, 104);
 
     --menu-text-color: rgb(88, 231, 95);
     --my-name-color: rgb(7, 7, 7);
@@ -45,7 +45,7 @@ body{
 header{
     background: var(--header-color);
     max-width: 250px;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: flex-end;
     position: fixed;
@@ -55,16 +55,12 @@ header{
 
 
 .container-header{
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-height: 80%;
     /*
     max-width: 250px;
     
     height: var(--header-height);
-    position: fixed;
+    
     border: 2px solid rgb(88, 231, 95);
     box-shadow: 5px rgb(88, 231, 95);
     border-radius: 20px;
@@ -160,12 +156,11 @@ main{
     float: right;
     /*width: var(--main-width);*/
     max-width: calc(100% - 250px);
-    background: var(--main-color);
+    /*background: var(--main-color);*/
+    background: var(--main-background-color);
     display: flex;
     justify-content: flex-start;
     color: var(--main-text-color);
-    
-    background: rgb(37, 37, 37);
 }
 
 /*
@@ -186,7 +181,8 @@ main{
     align-items: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    /*background: rgb(75, 36, 107);*/
+    
+    /*background: rgb(154, 65, 226);*/
 }
 
 .container{
@@ -196,23 +192,32 @@ main{
 
 .my-name{
     color: black;
-    width: 100%;
-    max-height: 20vh;
+    width: 90%;
+    margin: 10px auto;
     font-size: 3rem;
-    /*font-family: "Rowdies", sans-serif;*/
+    
     font-family: "Orbitron", sans-serif;
     /* 
+    font-family: "Rowdies", sans-serif;
     no me gusta queda may grande y exagerado
     font-family: "Ga Maamli", sans-serif;
     font-family: "Carter One", system-ui;
     */
 
-    /*color: var(--green-text);*/
+    color: var(--green-text);
 
-    font-weight: 900;
+    font-weight: 500;
     font-style: normal;
     text-align: center;
+    /*
     text-shadow: 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24);
+    */
+}
+
+.block-description{
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px 10px;
 }
 
 .description-job{
@@ -248,7 +253,7 @@ main{
 
 .title-section{
     width: 100%;
-    margin: 10px 0;
+    margin: 10px auto;
     text-align: center;
     /*background: blueviolet;*/
     padding: 20px 20px;
@@ -307,9 +312,8 @@ main{
 
 .section-skills{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    
+    grid-template-columns: repeat(3, 150px);
+    gap: 15px;
 
     /*
     flex-wrap: wrap;
@@ -368,7 +372,7 @@ main{
     width: 90%;
 }
 
-.container-flex-center{
+.container-flex{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -411,17 +415,34 @@ article{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*background: pink;*/
 }
 
 .contact{
     width: 70%;
-    height: 100px;
-    /*background: yellow;*/
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 2px solid green;
 }
 
+.link-block{
+    /*background: lightgreen;*/
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.link-block:hover{
+    transition: all 1s;
+    border: 2px solid lightgreen;
+}
+*/
+
+
 .contact-container-img{
-    height: 70px;
-    width: 30%;
+    height: 50px;
+    width: 20%;
     /*background: blue;*/
     display: flex;
     justify-content: center;
@@ -430,16 +451,22 @@ article{
 .container-text{
     height: 70px;
     /*background: red;*/
-    font-size: 1.3rem;
     text-align: left;
-    width: 70%;
+    width: 80%;
     display: flex;
     align-items: center;
+    margin: 10px 0px;
+
+    overflow: auto;
 }
 
-.container-text a{
+.container-text p{
     color: white;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Orbitron", sans-serif;
 }
+
 
 footer{
     display: block;
@@ -518,24 +545,21 @@ footer p{
 
     .container{
         /*background: red;*/
-        width: 100%;
+        width: 90%;
     }
 
        
     .my-name{
-        color: black;
-        width: 100%;
-        max-height: 20vh;
         font-size: 2.5rem;
         /* 
+        max-height: 20vh;
         no me gusta queda may grande y exagerado
         font-family: "Ga Maamli", sans-serif;
-        */
-
         font-weight: 400;
         font-style: normal;
         text-align: center;
         text-shadow: 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24);
+        */
     }
 
     .description-job{
@@ -630,6 +654,65 @@ footer p{
         width: 90px;
         height: 120px;
     }
+
+
+
+
+
+    .container-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+    .contact-container{
+        max-height: 100vh;
+        width: 100%;
+        padding: 10px 5px;
+        /*background: lightskyblue;*/
+        margin: 10px auto;
+    }
+    
+    .contact{
+        width: 100%;
+        /*background: brown;*/
+        border-radius: 10px;
+        padding: 10px 5px;
+        border: 2px solid green;
+    }
+    
+    .contact-container-img{
+        height: 50px;
+        width: 20%;
+        /*background: blue;*/
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container-text{
+        width: 100%;
+        /*background: lightsalmon;*/
+    }
+    
+    .container-text p{
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+
+
+
+
+
+
+
+
 
     footer{
         float: right;
