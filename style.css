@@ -46,16 +46,27 @@ header{
     background: var(--header-color);
     max-width: 250px;
     height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
     float: left;
+    position: fixed;
+    
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .container-header{
     max-height: 80%;
+    width: 90%;
+    /*background: red;*/
+    padding: 20px 0px;
     /*
     max-width: 250px;
     
@@ -75,9 +86,6 @@ header{
 .img-container{
     border-radius: 20px;
     width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
 }
 
 img{
@@ -88,7 +96,7 @@ img{
 }
 
 nav{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -194,7 +202,7 @@ main{
     color: black;
     width: 90%;
     margin: 10px auto;
-    font-size: 3rem;
+    font-size: 2.5rem;
     
     font-family: "Orbitron", sans-serif;
     /* 
@@ -228,7 +236,7 @@ main{
     text-align: center;
     color: var(--menu-text-color);
     /*text-shadow: 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24);*/
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
 }
 
@@ -421,7 +429,7 @@ article{
 .contact{
     width: 70%;
     width: 100%;
-    height: 120px;
+    height: 90px;
     border-radius: 10px;
     border: 2px solid green;
 }
@@ -455,7 +463,7 @@ article{
     width: 80%;
     display: flex;
     align-items: center;
-    margin: 10px 0px;
+    /*margin: 10px 0px;*/
 
     overflow: auto;
 }
@@ -521,7 +529,7 @@ footer p{
     
 
     .menu a{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         text-decoration: none;
         height: 40px;
     }
@@ -530,7 +538,8 @@ footer p{
         cursor: pointer;
         max-width: 100%;
         transition: all 0.3s;
-        scale: 1;
+        font-size: 0.9rem;
+        /*scale: 1.2;*/
     }
 
     main{
@@ -550,14 +559,15 @@ footer p{
 
        
     .my-name{
-        font-size: 2.5rem;
+        font-size: 2rem;
+        text-align: left;
         /* 
         max-height: 20vh;
         no me gusta queda may grande y exagerado
         font-family: "Ga Maamli", sans-serif;
         font-weight: 400;
         font-style: normal;
-        text-align: center;
+        
         text-shadow: 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24), 0 0 20px rgb(43, 255, 24);
         */
     }
