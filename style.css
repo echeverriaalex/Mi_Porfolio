@@ -356,7 +356,6 @@ main, footer{
     margin: 30px 0px;
 }
 
-/*
 .skill:hover{
     transition: all 0.4s;
     cursor: pointer;
@@ -364,7 +363,6 @@ main, footer{
     margin-bottom: 40px;
     background: linear-gradient( black 30%,  gray 70%,  rgba(88, 231, 95, 0.507) 90%);
 }
-*/
 
 .skill-image-container{
     width: 90%;
@@ -410,7 +408,6 @@ article{
     border: 2px solid rgb(139, 204, 17);
     height: 50%;
 }
-
 
 .container-flex-column{
     display: flex;
@@ -482,8 +479,6 @@ article{
     font-size: 1rem;
     font-family: "Orbitron", sans-serif;
 }
-
-
 
 main, footer{
     float: right;
